@@ -6,7 +6,7 @@
           <h1>Oooops</h1>
           <p>Something went wrong here...</p>
           <p class="red--text">Error: {{ error.message }}</p>
-          <v-btn nuxt to="/" class="text-capitalize">Go Home</v-btn>
+          <v-btn nuxt to="/" color="primary" class="text-capitalize">Go Home</v-btn>
         </v-col>
       </v-row>
     </v-container>
