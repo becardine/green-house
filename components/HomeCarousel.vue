@@ -11,21 +11,35 @@
       </v-btn>
     </template>
     <v-carousel-item v-for="(p, i) in sale_items" :key="`saleItem-${i}`">
-        <v-img height="100vh" :src="p.image">
+      <v-img height="100vh" :src="p.image">
         <v-container class="fill-height">
           <v-row dense align="center">
             <v-col md="7">
-              <div style="background-color: rgba(255,255,255,0.8)" class="pa-md-10 pa-5 rounded-lg black--text text-center text-md-left">
+              <div
+                style="background-color: rgba(255, 255, 255, 0.8)"
+                class="
+                  pa-md-10 pa-5
+                  rounded-lg
+                  black--text
+                  text-center text-md-left
+                "
+              >
                 <h2 class="text-md-h3 text-h5">
                   {{ p.name }}
                 </h2>
                 <p class="text-md-5 text-subtitle-1 primary--text mt-5">
-                  {{ p.price }}
+                  {{ $formatMoney(p.price) }}
                 </p>
                 <p class="text-md-body-2 mb-7">
                   {{ p.description }}
                 </p>
-                <v-btn depressed color="primary" class="text-capitalize" min-height="40">
+                <v-btn
+                  :to="`/products/${p.id}`"
+                  depressed
+                  color="primary"
+                  class="text-capitalize"
+                  min-height="40"
+                >
                   Check It Out
                 </v-btn>
               </div>
@@ -39,9 +53,9 @@
 
 <script>
 export default {
-    props: {
-        sale_items: Array,
-    }
+  props: {
+    sale_items: Array,
+  },
 };
 </script>
 
