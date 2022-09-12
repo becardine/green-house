@@ -15,11 +15,11 @@
         <v-icon size="20">mdi-store-outline</v-icon>
     </v-btn>
     <v-badge overlap :content="$store.state.cart.cart.length" v-if="$store.state.cart.cart.length > 0">
-      <v-btn icon>
+      <v-btn nuxt to="/cart" icon>
           <v-icon size="20">mdi-cart-outline</v-icon>
       </v-btn>
     </v-badge>
-    <v-btn v-else icon>
+    <v-btn v-else nuxt to="/cart" icon>
         <v-icon size="20">mdi-cart-outline</v-icon>
     </v-btn>
     <v-divider vertical class="mx-md-5 mx-2" />
